@@ -1,5 +1,6 @@
-namespace TransportChallenge;
+using TransportChallenge;
 
-public class Airplane
+public class Airplane : Vehicle, IFlyable
 {
+    public override string Move() => "Flying in the sky.";
 }

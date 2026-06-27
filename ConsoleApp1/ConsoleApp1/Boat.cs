@@ -1,5 +1,9 @@
-namespace TransportChallenge;
+using TransportChallenge;
 
-public class Boat
+namespace TransportChallenge
 {
+    public class Boat : Vehicle, ISailable
+    {
+        public override string Move() => "Sailing on the water.";
+    }
 }

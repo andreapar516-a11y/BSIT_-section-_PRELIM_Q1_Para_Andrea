@@ -1,9 +1,22 @@
-namespace TransportChallenge;
 
-public static class TransportResolver
+
+namespace TransportChallenge
 {
-    public static object? Resolve(string input)
+    public static class TransportResolver
     {
-        return null;
+        public static Vehicle? Resolve(string input)
+        {
+            if (string.IsNullOrWhiteSpace(input))
+                return null;
+
+            switch (input.Trim().ToLowerInvariant())
+            {
+                case "car": return new Car();
+                case "plane": return new Airplane();
+                case "boat": return new Boat();
+                case "helicopter": return new Helicopter();
+                default: return null;
+            }
+        }
     }
 }
